@@ -6,13 +6,14 @@
   <title>Clarionworksco</title>
   <style>
     :root {
-      --bg: #111111;
-      --panel: #1b1b1b;
-      --panel-2: #232323;
-      --text: #f5f1e8;
-      --muted: #c7bfae;
-      --gold: #c7a24a;
-      --tan: #d8c29b;
+      --bg: #061427;
+      --bg-2: #0a1d36;
+      --panel: #0d2442;
+      --panel-2: #133154;
+      --text: #eaf4ff;
+      --muted: #b7cde3;
+      --accent: #5aa9ff;
+      --accent-2: #8dc5ff;
       --line: rgba(255,255,255,0.08);
     }
 
@@ -24,7 +25,7 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: linear-gradient(180deg, #0e0e0e 0%, #171717 100%);
+      background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
       color: var(--text);
       line-height: 1.6;
     }
@@ -47,8 +48,8 @@
     header {
       position: sticky;
       top: 0;
-      z-index: 10;
-      background: rgba(12,12,12,0.9);
+      z-index: 20;
+      background: rgba(4, 16, 33, 0.88);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--line);
     }
@@ -68,7 +69,7 @@
     }
 
     .brand img {
-      height: 52px;
+      height: 56px;
       width: auto;
       object-fit: contain;
     }
@@ -78,7 +79,7 @@
       font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: var(--tan);
+      color: var(--text);
     }
 
     nav ul {
@@ -89,13 +90,13 @@
     }
 
     nav a {
-      color: var(--text);
+      color: var(--muted);
       font-size: 0.95rem;
       transition: 0.2s ease;
     }
 
     nav a:hover {
-      color: var(--gold);
+      color: var(--accent-2);
     }
 
     .hero {
@@ -104,13 +105,13 @@
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
+      grid-template-columns: 1.1fr 0.9fr;
       gap: 36px;
       align-items: center;
     }
 
     .eyebrow {
-      color: var(--gold);
+      color: var(--accent-2);
       text-transform: uppercase;
       letter-spacing: 0.18em;
       font-size: 0.82rem;
@@ -119,7 +120,7 @@
     }
 
     .hero h1 {
-      font-size: clamp(2.4rem, 5vw, 5rem);
+      font-size: clamp(2.6rem, 5vw, 5.2rem);
       line-height: 0.95;
       margin-bottom: 18px;
       text-transform: uppercase;
@@ -150,27 +151,27 @@
     }
 
     .btn-primary {
-      background: var(--gold);
-      color: #111;
+      background: var(--accent);
+      color: #041221;
     }
 
     .btn-primary:hover {
       transform: translateY(-2px);
-      opacity: 0.95;
+      opacity: 0.96;
     }
 
     .btn-secondary {
-      border-color: var(--tan);
-      color: var(--tan);
+      border-color: var(--accent-2);
+      color: var(--accent-2);
       background: transparent;
     }
 
     .btn-secondary:hover {
-      background: rgba(216,194,155,0.08);
+      background: rgba(141,197,255,0.08);
     }
 
     .hero-card {
-      background: linear-gradient(180deg, #1a1a1a 0%, #101010 100%);
+      background: linear-gradient(180deg, #0d2442 0%, #08172b 100%);
       border: 1px solid var(--line);
       border-radius: 28px;
       overflow: hidden;
@@ -179,7 +180,7 @@
       align-items: end;
       padding: 28px;
       position: relative;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.28);
     }
 
     .hero-card::before {
@@ -187,9 +188,9 @@
       position: absolute;
       inset: 0;
       background:
-        linear-gradient(to top, rgba(0,0,0,0.65), rgba(0,0,0,0.05)),
-        url("https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=80") center/cover;
-      opacity: 0.9;
+        linear-gradient(to top, rgba(2,10,20,0.78), rgba(2,10,20,0.14)),
+        radial-gradient(circle at top right, rgba(90,169,255,0.28), transparent 35%),
+        linear-gradient(135deg, #143a63 0%, #0a1d36 55%, #061427 100%);
     }
 
     .hero-card-content {
@@ -199,7 +200,7 @@
 
     .hero-card-content span {
       display: inline-block;
-      color: var(--gold);
+      color: var(--accent-2);
       font-size: 0.85rem;
       text-transform: uppercase;
       letter-spacing: 0.16em;
@@ -221,7 +222,7 @@
       font-size: 2rem;
       text-transform: uppercase;
       margin-bottom: 12px;
-      color: var(--tan);
+      color: var(--text);
     }
 
     .section-copy {
@@ -253,7 +254,7 @@
     }
 
     .card h3 {
-      color: var(--gold);
+      color: var(--accent-2);
       margin-bottom: 10px;
       text-transform: uppercase;
       font-size: 1rem;
@@ -269,7 +270,7 @@
     }
 
     .featured-box {
-      background: linear-gradient(180deg, #1c1c1c 0%, #101010 100%);
+      background: linear-gradient(180deg, #102845 0%, #081729 100%);
       border-radius: 24px;
       overflow: hidden;
       border: 1px solid var(--line);
@@ -277,8 +278,9 @@
 
     .featured-image {
       height: 260px;
-      background-size: cover;
-      background-position: center;
+      background:
+        linear-gradient(135deg, rgba(90,169,255,0.24), rgba(6,20,39,0.2)),
+        linear-gradient(180deg, #1a4b7c 0%, #0c2542 100%);
     }
 
     .featured-content {
@@ -288,7 +290,7 @@
     .featured-content h3 {
       font-size: 1.1rem;
       margin-bottom: 8px;
-      color: var(--tan);
+      color: var(--text);
       text-transform: uppercase;
     }
 
@@ -312,7 +314,7 @@
     }
 
     .about-panel h3 {
-      color: var(--gold);
+      color: var(--accent-2);
       margin-bottom: 12px;
       text-transform: uppercase;
     }
@@ -327,8 +329,8 @@
     }
 
     .cta {
-      background: linear-gradient(135deg, rgba(199,162,74,0.14), rgba(216,194,155,0.08));
-      border: 1px solid rgba(199,162,74,0.28);
+      background: linear-gradient(135deg, rgba(90,169,255,0.16), rgba(141,197,255,0.08));
+      border: 1px solid rgba(141,197,255,0.24);
       border-radius: 28px;
       padding: 40px 28px;
       text-align: center;
@@ -413,11 +415,11 @@
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <div class="eyebrow">Outerwear • Lifestyle • Performance</div>
-          <h1>Built for movement. Styled for every season.</h1>
+          <div class="eyebrow">Clarionworksco</div>
+          <h1>The Jackets Are On</h1>
           <p>
-            Clarionworksco brings together everyday wear, statement outerwear,
-            performance gear, and clean street-inspired essentials in one brand space.
+            Clean outerwear, bold essentials, and performance-driven apparel built
+            around a deep blue brand identity.
           </p>
           <div class="hero-buttons">
             <a href="#shop" class="btn btn-primary">Shop the Drop</a>
@@ -427,8 +429,8 @@
 
         <div class="hero-card">
           <div class="hero-card-content">
-            <span>Current Focus</span>
-            <h2>The Jackets Are On</h2>
+            <span>Current Drop</span>
+            <h2>Blue Brand Direction</h2>
           </div>
         </div>
       </div>
@@ -438,77 +440,54 @@
       <div class="container">
         <h2 class="section-title">Collections</h2>
         <p class="section-copy">
-          Core pieces and specialty categories designed to keep the brand flexible across every drop.
+          Built to expand into jackets, hoodies, hats, lounge gear, gym gear, swim,
+          run, safety gear, and more.
         </p>
 
         <div class="grid collections">
-          <div class="card">
-            <h3>Jackets</h3>
-            <p>Heavyweight and lightweight outerwear with a clean branded look.</p>
-          </div>
-          <div class="card">
-            <h3>Hoodies</h3>
-            <p>Layered comfort with everyday wearability and strong street presence.</p>
-          </div>
-          <div class="card">
-            <h3>Hats</h3>
-            <p>Simple branded accessories to finish off the full look.</p>
-          </div>
-          <div class="card">
-            <h3>Safety Gear</h3>
-            <p>Utility-minded pieces that keep the workwear side of the brand visible.</p>
-          </div>
-          <div class="card">
-            <h3>ClarionRun</h3>
-            <p>Running-focused gear built for pace, movement, and performance.</p>
-          </div>
-          <div class="card">
-            <h3>ClarionSwim</h3>
-            <p>Seasonal swim pieces with a bold but minimal identity.</p>
-          </div>
-          <div class="card">
-            <h3>Clarion Lounge</h3>
-            <p>Relaxed essentials for daily wear, travel, and home comfort.</p>
-          </div>
-          <div class="card">
-            <h3>Clarion Gym</h3>
-            <p>Training-ready apparel for active use without losing the brand style.</p>
-          </div>
+          <div class="card"><h3>Jackets</h3><p>Statement outerwear with a strong brand look.</p></div>
+          <div class="card"><h3>Hoodies</h3><p>Everyday comfort with a sharper visual edge.</p></div>
+          <div class="card"><h3>Hats</h3><p>Clean accessories to complete the full set.</p></div>
+          <div class="card"><h3>Safety Gear</h3><p>Utility-focused apparel with branded impact.</p></div>
+          <div class="card"><h3>ClarionRun</h3><p>Movement-based gear for pace and training.</p></div>
+          <div class="card"><h3>ClarionSwim</h3><p>Seasonal pieces with a sleek performance feel.</p></div>
+          <div class="card"><h3>Clarion Lounge</h3><p>Relaxed essentials for off-duty wear.</p></div>
+          <div class="card"><h3>Clarion Gym</h3><p>Training-ready apparel with clean identity.</p></div>
         </div>
       </div>
     </section>
 
     <section id="featured">
       <div class="container">
-        <h2 class="section-title">Featured Pieces</h2>
+        <h2 class="section-title">Featured</h2>
         <p class="section-copy">
-          A homepage layout that looks like a real brand site instead of an app screen.
+          This version stays in the deep blue scheme instead of the gold one.
         </p>
 
         <div class="grid featured">
           <div class="featured-box">
-            <div class="featured-image" style="background-image:url('https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80');"></div>
+            <div class="featured-image"></div>
             <div class="featured-content">
-              <h3>Signature Jacket</h3>
-              <p>Clean outerwear styling with premium visual weight and strong homepage appeal.</p>
+              <h3>Outerwear Focus</h3>
+              <p>Homepage section built for the main jacket story.</p>
               <a href="#shop" class="btn btn-secondary">Explore</a>
             </div>
           </div>
 
           <div class="featured-box">
-            <div class="featured-image" style="background-image:url('https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1200&q=80');"></div>
+            <div class="featured-image"></div>
             <div class="featured-content">
-              <h3>Essential Hoodie</h3>
-              <p>Minimal, comfortable, and brand-ready for a featured drop section.</p>
+              <h3>Essential Layers</h3>
+              <p>Strong branded layout for hoodies and core pieces.</p>
               <a href="#shop" class="btn btn-secondary">Explore</a>
             </div>
           </div>
 
           <div class="featured-box">
-            <div class="featured-image" style="background-image:url('https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=1200&q=80');"></div>
+            <div class="featured-image"></div>
             <div class="featured-content">
-              <h3>Everyday Set</h3>
-              <p>Versatile apparel styling that keeps the page looking modern and store-ready.</p>
+              <h3>Performance Gear</h3>
+              <p>Blue-forward styling for gym, run, and activewear sections.</p>
               <a href="#shop" class="btn btn-secondary">Explore</a>
             </div>
           </div>
@@ -521,19 +500,18 @@
         <div class="about-panel">
           <h3>About the Brand</h3>
           <p>
-            Clarionworksco is built around apparel that moves between everyday wear,
-            active use, and outerwear-heavy statement pieces. The look is strong,
-            clean, and grounded in neutral tones with gold and tan accents.
+            Clarionworksco is built around apparel that moves between streetwear,
+            utility, performance, and statement outerwear.
           </p>
         </div>
 
         <div class="about-panel">
           <h3>Brand Direction</h3>
           <ul>
-            <li>Website-style layout, not app-style layout</li>
-            <li>Dark luxury background with gold/tan highlights</li>
-            <li>Built to expand into multiple product pages later</li>
-            <li>Designed to support branded collections and seasonal drops</li>
+            <li>Deep blue main color scheme</li>
+            <li>Website layout, not app layout</li>
+            <li>Built to grow into a full storefront</li>
+            <li>Logo kept directly in the header</li>
           </ul>
         </div>
       </div>
@@ -542,10 +520,9 @@
     <section id="shop">
       <div class="container">
         <div class="cta">
-          <h2>New season. New drop.</h2>
+          <h2>Clarionworksco Live Site</h2>
           <p>
-            This homepage is set up so you can keep building from here with shop pages,
-            product sections, and more branded content.
+            This is the corrected blue version for your GitHub Pages site.
           </p>
           <a href="#" class="btn btn-primary">Enter Store</a>
         </div>
